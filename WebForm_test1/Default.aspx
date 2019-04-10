@@ -3,17 +3,20 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron container">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+        <h1 id="hello-text" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
+            Hello
+        </h1>
+        <p class="lead">
+          Welcome to my personal portfolio. 
+        </p>
+        <p><a href="/About" class="btn btn-primary btn-lg">Learn more about me &raquo;</a></p>
     </div>
 
     <div class="header-center">
         <h3>Some of my latest work</h3>
-
     </div>
 
-    <div class="container">
+    <div class="container panel">
         <div class="row" id="info-panel">
         <div class="col-md-4" id="info-panel-1">
             <h2>Like me on Facebook</h2>
@@ -21,7 +24,7 @@
                 Get to know me more on Facebook. 
             </p>
             <p>
-                <a class="btn btn-default" href="https://www.facebook.com/sagardhuri93">Click here &raquo;</a>
+               <a class="btn btn-default" href="https://www.facebook.com/sagardhuri93">Click here &raquo;</a>
             </p>
         </div>
         <div class="col-md-4" id="info-panel-2">
@@ -30,7 +33,7 @@
                 NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
             </p>
             <p>
-                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
+               <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
             </p>
         </div>
         <div class="col-md-4" id="info-panel-3">
