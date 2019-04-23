@@ -2,6 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+    <%--Jumbotron - heading with Hello--%>
     <div class="jumbotron container">
         <h1 id="hello-text" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">
             Hello
@@ -16,7 +17,10 @@
         <h3>Some of my latest work</h3>
     </div>
 
-    <div class="container panel">
+
+
+    <%-- Container Panel--%>
+    <%--<div class="container panel">
         <div class="row" id="info-panel">
         <div class="col-md-4" id="info-panel-1">
             <h2>Like me on Facebook</h2>
@@ -46,8 +50,47 @@
             </p>
         </div>
     </div>
+    </div>--%>
 
-    </div>
+    <%--Carousel Panel with quotes--%>
+     <%--<div id="carousel-panel">
+        <div class="btn-bar">
+            <div id="arrow-buttons">
+                <a id="prev" href="#"></a>
+                <a id="next" href="#"></a>
+            </div>
+            <div id="slides">
+                <ul>
+                    <%--First slide--%>
+                   <%-- <li class="slide">
+                        <div class="quote-container">
+                            <p class="quote-phrase">
+                                <span class="quote-marks">I was literally BLOWN AWAY by Company A's work! They went above and beyond all of our expectations with design, usability. and branding, I will reccommend them to everyone I know!</span>
+                            </p>
+                        </div>
+                        <div class="author-container">
+                            <p class="author-name">
+                                Sagar Dhuri
+                            </p>
+                        </div>
+                    </li>--%>
 
-    
+                    <%--Second Slide--%>
+                    <%--<li class="slide">
+                        <div class="quote-container">
+                            <p class="quote-phrase">
+                                <span class="quote-marks">I could not stop staring! Company A's Web Solutions are by far the most elegant solutions, you can't beat their quality and attention to detail!</span>
+                            </p>
+                        </div>
+                        <div class="author-container">
+                            <p class="author-name">
+                                Sagar Dhuri
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </div>--%>
 </asp:Content>

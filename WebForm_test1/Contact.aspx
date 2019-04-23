@@ -2,21 +2,18 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="page-body col-lg-12 ">
-        <div class="col-lg-6">
+        <div class="col-lg-6 page-body">
             <h1><%: Title %>.</h1>
             <h3>Your contact page.</h3>
             <address>
-                One Microsoft Way<br />
-                Redmond, WA 98052-6399<br />
-                <abbr title="Phone">P:</abbr>
-                425.555.0100
+                
             </address>
             <address>
                 <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
                 <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
             </address>
         </div>
-        <div class="col-lg-6" style="height: 400px; width:200px;">
+        <div class="col-lg-6" style="height: 700px; width:200px;">
 
         </div>
     </div>

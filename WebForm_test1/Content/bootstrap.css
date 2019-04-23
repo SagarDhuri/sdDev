@@ -4561,6 +4561,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
   border-color: #101010;
+  background: #191e28 !important;
 }
 
 .navbar-inverse .navbar-nav > .open > a,
@@ -6815,4 +6816,25 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+}
+
+/*Bootstrap override*/
+
+html,
+body {
+	height: 100%;
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+	background: #191e28 !important;
+}
+
+#navbar-collapse-id {
+	text-align: center !important;
+	color: white !important;
+}
+
+.navbar-inverse {
+	background-color: #191e28;
 }

@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> - Sagar Dhuri Personal Portfolio</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -50,7 +50,7 @@
                     </button>
                     <a class="navbar-brand logo" runat="server" href="~/"></a>
                 </div>
-                <div class="navbar-collapse collapse" id="myTopNav">
+                <div class="navbar-collapse collapse" id="navbar-collapse-id">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" id="about" href="~/About">about</a></li>
                         <li><a runat="server" href="~/Contact">contact</a></li>
@@ -80,15 +80,12 @@
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <hr />
-            
         </div>
-        <footer class="container footer-container">
-                <div class="container">
+    </form>
+    <footer class="container footer-container">
+              <%--  <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            <!-- Content -->
-				            <h5 class="text-uppercase">Footer Content</h5>
-				            <p>Here you can use rows and columns here to organize your footer content.</p>
                         </div>
                         <div class="col-md-offset-3 col-md-3">
                             <h5 style="text-transform:uppercase;font-weight:bolder" id="social-links-heading">Social Media</h5>
@@ -108,9 +105,8 @@
                 </div>
                 <div class="footer-bottom">
                     <p class="text-muted text-center" id="copyright-tag">&copy; <%: DateTime.Now.Year %> - Desgined by Sagar Dhuri</p>
-                </div>
-            </footer>
-    </form>
+                </div>--%>
+    </footer>
 </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </html>
