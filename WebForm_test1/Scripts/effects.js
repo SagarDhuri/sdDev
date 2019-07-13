@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
 	// Home page welcome animation for Hello/Namaste.
-	$('#hello-text').hover(
-		function () {
+	$('#hello-text').hover(function () {
 			var $this = $(this); // caching $(this)
 			$this.data('Hello', $this.text());
 			$this.text("Namaste!");
@@ -12,83 +11,90 @@
 		}
 	);
 
-	$("#about").click(function () {
-		$(".navbar").animate({top: '-250px'},"slow");
-	}); 
-
+	//$("#about").click(function () {
+	//	$(".navbar").animate({
+	//		top: '-250px',
+	//		opacity: '0.5'}, "10010");
+	//}); 
+	$('#about').click(
+		function () {
+			$('.navbar').hide("slow");
+			$('body').fadeOut("slow");
+	},
+		function () {
+			$('.navbar').show("slow");
+		});
 });
 
+$(document).ready(function () {
+	//rotation speed and timer
+	var speed = 5000;
 
-/* 
-* Function to animate leaving a page
-*/
-$.fn.leavePage = function() { 	
-  	
-	this.click(function(event){
+	var run = setInterval(rotate, speed);
+	var slides = $('.slide');
+	var container = $('#slides ul');
+	var elm = container.find(':first-child').prop("tagName");
+	var item_width = container.width();
+	var previous = 'prev'; //id of previous button
+	var next = 'next'; //id of next button
+	slides.width(item_width); //set the slides to the correct pixel width
+	container.parent().width(item_width);
+	container.width(slides.length * item_width); //set the slides container to the correct total width
+	container.find(elm + ':first').before(container.find(elm + ':last'));
+	resetSlides();
 
-		event.preventDefault();
-		linkLocation = this.href;
 
-		$('#header').animate({'opacity':'0', 'top':'-92px'}, 500, 'easeOutExpo');
-		$('body').fadeOut(500, function(){
-			window.location = linkLocation;
-		});      
-	}); 
-};
+	//if user clicked on prev button
 
-/* 
-* Function to animate about page
-*/
-function animateAbout() {
+	$('#arrow-buttons a').click(function (e) {
+		//slide the item
 
-	// Animate section 0 (if window height is small enough)
-	if ($(window).height() <= 880) {
-
-		$('#img-0').waypoint(function (event, direction) {
-
-			$('#img-0').css({ 'visibility': 'visible', 'top': '500px' }).stop().animate({ 'opacity': '1', 'top': '0px' }, 1000, 'easeOutExpo');
-
-		}, {
-				offset: '80%',
-				triggerOnce: true
+		if (container.is(':animated')) {
+			return false;
+		}
+		if (e.target.id == previous) {
+			container.stop().animate({
+				'left': 0
+			}, 1500, function () {
+				container.find(elm + ':first').before(container.find(elm + ':last'));
+				resetSlides();
 			});
+		}
 
-	} else {
+		if (e.target.id == next) {
+			container.stop().animate({
+				'left': item_width * -2
+			}, 1500, function () {
+				container.find(elm + ':last').after(container.find(elm + ':first'));
+				resetSlides();
+			});
+		}
 
-		$('#img-0').css({ 'visibility': 'visible', 'opacity': '1' });
+		//cancel the link behavior            
+		return false;
+
+	});
+
+	//if mouse hover, pause the auto rotation, otherwise rotate it    
+	container.parent().mouseenter(function () {
+		clearInterval(run);
+	}).mouseleave(function () {
+		run = setInterval(rotate, speed);
+	});
+
+
+	function resetSlides() {
+		//and adjust the container so current is in the frame
+		container.css({
+			'left': -1 * item_width
+		});
 	}
 
-	// Animate Section 1
-	$('#img-1').waypoint(function (event, direction) {
+});
+//a simple function to click next link
+//a timer will call this function, and the rotation will begin
 
-		$('#img-1').css({ 'visibility': 'visible', 'right': '50%' }).stop().animate({ 'opacity': '1', 'right': '0%' }, 1000, 'easeOutExpo');
+function rotate() {
+	$('#next').click();
+}
 
-	}, {
-			offset: '80%',
-			triggerOnce: true
-		});
-
-	// Animate Chart
-	$('.bar-chart').waypoint(function (event, direction) {
-
-		$('#aqua').css({ 'visibility': 'visible', 'height': '0%' }).stop().delay(200).animate({ 'opacity': '1', 'height': '95%' }, 1000, 'easeOutExpo');
-		$('#pink').css({ 'visibility': 'visible', 'height': '0%' }).stop().delay(400).animate({ 'opacity': '1', 'height': '90%' }, 1000, 'easeOutExpo');
-		$('#yellow').css({ 'visibility': 'visible', 'height': '0%' }).stop().delay(600).animate({ 'opacity': '1', 'height': '95%' }, 1000, 'easeOutExpo');
-		$('#brown').css({ 'visibility': 'visible', 'height': '0%' }).stop().delay(800).animate({ 'opacity': '1', 'height': '75%' }, 1000, 'easeOutExpo');
-		$('#red').css({ 'visibility': 'visible', 'height': '0%' }).stop().delay(1000).animate({ 'opacity': '1', 'height': '40%' }, 1000, 'easeOutExpo');
-
-	}, {
-			offset: '80%',
-			triggerOnce: true
-		});
-
-	// Animate Featured in
-	$('#img-2').waypoint(function (event, direction) {
-
-		$('#img-2').css({ 'visibility': 'visible', 'left': '50%' }).stop().animate({ 'opacity': '1', 'left': '0%' }, 1000, 'easeOutExpo');
-
-	}, {
-			offset: '80%',
-			triggerOnce: true
-		});
-};
