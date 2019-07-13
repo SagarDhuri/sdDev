@@ -71,7 +71,7 @@ textarea {
 
 .navbar-nav {
     text-align: center;
-    background: #283e4a;
+    background: #191e28;
 }
 
 .navbar-collapse {
@@ -186,7 +186,7 @@ textarea {
     }
     
     .navbar-nav {
-        float: right;
+        float: right !important;
         position: relative;
         top: 8px;
         right: 50px;

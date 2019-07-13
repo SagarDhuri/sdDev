@@ -18,9 +18,9 @@
                 </div>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-4" style="padding: 20px;">
-                <img src="/images/pictures/about-me-img.jpg" alt="About Me main image" style="max-width: 100%; max-height: 100%; margin-top: 25px;" />
+                <img src="/images/pictures/about-me-img.jpg" alt="About Me main image" style="max-width: 100%; max-height: 100%; margin-top: 70px;" />
             </div>
-             <div class="col-sm-4 col-md-4 col-lg-4" style="padding: 20px;">
+             <div class="col-sm-4 col-md-4 col-lg-4" style="padding: 20px; margin-top: 100px;">
                  <div class="about-intro">
                      <%--Sprites go here--%>
                      <h1 class="about-intro-subintro">Designer</h1>
