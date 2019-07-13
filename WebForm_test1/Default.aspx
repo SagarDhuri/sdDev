@@ -13,7 +13,7 @@
                 <%--<p><a href="/About" class="btn btn-primary btn-lg">Learn more about me &raquo;</a></p>--%>
             </div>
             <div class="col-md-6 col-lg-6">
-                <img src="/images/pictures/Sagar Dhuri_headshot.jpg" alt="Sagar home page picture." style="height: 200px" />
+                <img src="/images/pictures/headshot-img.jpg" alt="Home page headshot image." style="height: 200px" />
             </div>
         </div>
 

@@ -144,7 +144,8 @@
     </Content>
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="images\pictures\Sagar Dhuri_headshot.jpg" />
+    <Content Include="images\pictures\about-me-img.jpg" />
+    <Content Include="images\pictures\headshot-img.jpg" />
     <Content Include="images\themes\logo-white.png" />
     <Content Include="images\themes\logo.png" />
     <Content Include="images\themes\sprite.png" />
